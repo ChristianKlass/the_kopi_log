@@ -1,0 +1,50 @@
+body {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+    font-size: clamp(15px, 2.5vw, 17px) !important;
+    word-wrap: break-word; /* Ensure all text can wrap */
+}
+
+/* Scale down headings on smaller screens */
+h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.0rem); }
+h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
+
+/* Add padding to the main content area on all screens */
+.main {
+    padding: 20px;
+}
+
+/* Style the post list items */
+.post-entry {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    border-radius: 5px; /* Subtle rounded corners */
+}
+
+.home-info .entry-content pre {
+    word-break: break-word;    /* Breaks long words if necessary */
+    white-space: pre-wrap;     /* Allows text to wrap */
+    font-family: inherit;      /* Use the body's monospace font */
+    font-size: inherit;        /* Use the body's font size */
+    background: none;          /* Remove the default code block background */
+    border: none;              /* Remove the default code block border */
+    padding: 0;                /* Remove the default code block padding */
+}
+
+/* Styling for the AI disclaimer in the footer */
+.footer-disclaimer {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.footer-disclaimer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+.footer-disclaimer a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+services:
+  the_kopi_log:
+    image: the_kopi_log
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+    container_name: the_kopi_log
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-circuit_singapura
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${TUNNEL_TOKEN}
+    depends_on:
+      - the_kopi_log
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+
+networks:
+  default:
+    name: the_kopi_log_network

@@ -1,0 +1,17 @@
+--- Secrets ---
+.env
+
+--- State and Log Files ---
+.hobby_news_tracker.log
+.event_tracker.log
+cron.log
+blog/hugo.toml
+
+--- Hugo Build Artifacts ---
+blog/public/
+blog/resources/
+blog/hugo_cache/
+
+--- OS-specific files ---
+.DS_Store
+Thumbs.db
